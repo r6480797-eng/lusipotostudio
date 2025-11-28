@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lusi Photo Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <h1 class="logo">Lusi Photo Studio</h1>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <!-- MENU DROPDOWN -->
+    <ul class="menu" id="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#studio">Studio</a></li>
+        <li><a href="#layanan">Layanan</a></li>
+        <li><a href="#galeri">Galeri</a></li>
+        <li><a href="#booking">Booking</a></li>
+    </ul>
+
+    <!-- HOME SECTION -->
+    <section id="home" class="hero">
+        <h2 class="heading-big">Capture<br>Your Best Moment</h2>
+
+        <p class="desc">
+            Studio foto profesional untuk prewedding, portrait, katalog, keluarga, 
+            produk, dan dokumentasi event. Kami menciptakan hasil foto berkualitas tinggi 
+            dengan lighting premium dan konsep yang estetik.
+        </p>
+
+        <a href="#booking" class="btn-book">Booking Photoshoot</a>
+
+        <div class="hero-img">
+            <img src="1.jpeg" alt="Studio Photo">
+        </div>
+    </section>
+
+    <!-- TENTANG STUDIO -->
+    <section id="studio" class="section">
+        <h2 class="title">Tentang Studio</h2>
+        <p class="text">
+            Lusi Photo Studio menyediakan berbagai konsep foto seperti modern, minimalis,
+            aesthetic, dan glamour. Menggunakan peralatan lighting profesional serta ruang 
+            studio nyaman yang cocok untuk foto pribadi atau kelompok.
+        </p>
+    </section>
+
+    <!-- LAYANAN -->
+    <section id="layanan" class="section">
+        <h2 class="title">Layanan Photoshoot</h2>
+
+        <div class="card">
+            <h3>Photoshoot Portrait</h3>
+            <p>Foto wajah dan badan dengan lighting profesional.</p>
+        </div>
+
+        <div class="card">
+            <h3>Photoshoot Keluarga</h3>
+            <p>Foto keluarga di studio dengan konsep yang hangat & elegan.</p>
+        </div>
+
+        <div class="card">
+            <h3>Prewedding Studio</h3>
+            <p>Studio premium dengan konsep romantis & cinematic.</p>
+        </div>
+
+        <div class="card">
+            <h3>Produk / Brand</h3>
+            <p>Foto produk untuk UMKM, katalog, dan iklan.</p>
+        </div>
+    </section>
+
+    <!-- GALERI -->
+    <section id="galeri" class="section">
+        <h2 class="title">Galeri Studio</h2>
+
+        <div class="gallery">
+            <img src="2.jpeg">
+            <img src="3.jpeg">
+            <img src="4.jpeg">
+            <img src="5.jpeg">
+        </div>
+    </section>
+
+    <!-- FORM BOOKING -->
+    <section id="booking" class="section">
+        <h2 class="title">Form Booking Photoshoot</h2>
+        <p class="text">Isi formulir berikut untuk melakukan pemesanan sesi foto.</p>
+
+        <div class="booking-form">
+
+            <label>Nama Lengkap</label>
+            <input type="text" id="nama" placeholder="Nama Anda">
+
+            <label>Nomor WhatsApp</label>
+            <input type="text" id="wa" placeholder="628xxxxxxx">
+
+            <label>Paket Photoshoot</label>
+            <select id="layanan">
+                <option value="Portrait Studio">Portrait Studio</option>
+                <option value="Family Photoshoot">Family Photoshoot</option>
+                <option value="Prewedding Studio">Prewedding Studio</option>
+                <option value="Produk / Brand">Produk / Brand Photoshoot</option>
+            </select>
+
+            <label>Tanggal Photoshoot</label>
+            <input type="date" id="tanggal">
+
+            <label>Catatan Tambahan</label>
+            <textarea id="alamat" rows="3" placeholder="Tambahkan kebutuhan khusus (opsional)"></textarea>
+
+            <button class="btn-book" onclick="kirimWA()">Kirim Booking</button>
+        </div>
+    </section>
+
+    <!-- TOMBOL WA MELAYANG -->
+    <a class="wa-btn" href="https://wa.me/6283877631157" target="_blank">💬</a>
+
+    <!-- SCRIPT -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("menu").classList.toggle("active");
+        }
+
+        function kirimWA() {
+            let nama = document.getElementById("nama").value;
+            let wa = document.getElementById("wa").value;
+            let layanan = document.getElementById("layanan").value;
+            let tanggal = document.getElementById("tanggal").value;
+            let catatan = document.getElementById("alamat").value;
+
+            if (nama === "" || wa === "" || tanggal === "") {
+                alert("Harap isi data dengan lengkap.");
+                return;
+            }
+
+            let admin = "6283877631157";
+
+            let pesan =
+`Halo Kak, saya ingin booking sesi Photoshoot:
+Nama: ${nama}
+WhatsApp: ${wa}
+Paket: ${layanan}
+Tanggal: ${tanggal}
+Catatan: ${catatan}`;
+
+            window.open(`https://wa.me/${admin}?text=${encodeURIComponent(pesan)}`, "_blank");
+        }
+    </script>
+
+</body>
+</html>

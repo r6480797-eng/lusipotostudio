@@ -1,0 +1,179 @@
+ body {
+    margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background: #fff;
+    color: #444;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: white;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #cf7f85;
+}
+
+.menu-btn {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* MENU DROPDOWN */
+.menu {
+    display: none;
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.menu.active {
+    display: block;
+}
+
+.menu li {
+    padding: 10px 0;
+}
+
+.menu li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+/* SECTION GLOBAL */
+.section {
+    padding: 50px 25px;
+    text-align: center;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: bold;
+    color: #cf7f85;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 16px;
+    color: #555;
+}
+
+/* CARD LAYANAN */
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px auto;
+    width: 90%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* GALERI */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* HERO SECTION */
+.hero {
+    text-align: center;
+    padding: 25px;
+}
+
+.heading-big {
+    font-size: 34px;
+    font-weight: bold;
+    color: #cf7f85;
+}
+
+.desc {
+    margin-top: 10px;
+    color: #555;
+    font-size: 16px;
+    padding: 0 5px;
+}
+
+.btn-book {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #cf7f85;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.hero-img {
+    margin-top: 30px;
+}
+
+.hero-img img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+}
+
+/* WA BUTTON */
+.wa-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 14px 16px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.booking-form {
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+    text-align: left;
+}
+
+.booking-form label {
+    font-weight: 600;
+    display: block;
+    margin-top: 15px;
+    color: #cf7f85;
+}
+
+.booking-form input,
+.booking-form select,
+.booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.booking-form button {
+    width: 100%;
+    margin-top: 20px;
+}
